@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IWSettingViewController.h"
 
-@interface IWMeViewController : UITableViewController
+@interface IWMeViewController : IWSettingViewController
 
 @end
