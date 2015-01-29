@@ -111,7 +111,7 @@
     IWUser *user = status.user;
     
     // 2.头像
-    [self.iconView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageWithName:@"avatar_default_small"]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageWithName:@"avatar_default_small"]];
     self.iconView.frame = self.statusFrame.iconViewF;
     
     // 3.昵称

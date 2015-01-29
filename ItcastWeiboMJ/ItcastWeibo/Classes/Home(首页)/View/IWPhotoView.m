@@ -37,7 +37,7 @@
     self.gifView.hidden = ![photo.thumbnail_pic hasSuffix:@"gif"];
     
     // 下载图片
-    [self setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageWithName:@"timeline_image_placeholder"]];
+    [self sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageWithName:@"timeline_image_placeholder"]];
 }
 
 - (void)layoutSubviews

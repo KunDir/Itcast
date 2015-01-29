@@ -1,7 +1,7 @@
 // 0.账号相关
-#define IWAppKey @"1359433872"
-#define IWAppSecret @"37c372aa97a9329fc561947151c1bd38"
-#define IWRedirectURI @"http://ios.itcast.cn"
+#define IWAppKey @"32195145"
+#define IWAppSecret @"86f7e97a8b49374de7b0aed1c12f325e"
+#define IWRedirectURI @"http://www.csdn.net"
 #define IWLoginURL [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@", IWAppKey, IWRedirectURI]
 
 // 1.判断是否为iOS7
