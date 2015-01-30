@@ -49,3 +49,6 @@
 
 // 7.常用的对象
 #define IWNotificationCenter [NSNotificationCenter defaultCenter]
+
+#define IWTableBorderW  6
+#define IWCellMargin  6

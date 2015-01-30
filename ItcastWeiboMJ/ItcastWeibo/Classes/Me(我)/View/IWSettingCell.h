@@ -11,6 +11,7 @@
 
 @interface IWSettingCell : UITableViewCell
 @property (nonatomic, strong) IWSettingItem *item;
-
+@property (nonatomic, strong) NSIndexPath *indexPath;
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
 @end
