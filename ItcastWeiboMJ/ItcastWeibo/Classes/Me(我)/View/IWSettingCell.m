@@ -21,6 +21,12 @@
 
 @property (nonatomic, strong) IWBadgeButton *badgeButton;
 
+@property (nonatomic, weak) UITableView *tableView;
+
+@property (nonatomic, weak) UIImageView *bgView;
+
+@property (nonatomic, weak) UIImageView *selectedBgView;
+
 @end
 
 @implementation IWSettingCell
@@ -53,6 +59,32 @@
     return _badgeButton;
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if(self)
+    {
+        // 清除cell的背景
+        self.backgroundColor = [UIColor clearColor];
+        
+        // 标题
+        self.textLabel.backgroundColor = [UIColor clearColor];
+        self.textLabel.textColor = [UIColor blackColor];
+        self.textLabel.highlightedTextColor = self.textLabel.textColor;
+        self.textLabel.font = [UIFont boldSystemFontOfSize:15];
+        
+        // 创建背景
+        UIImageView *bgView = [[UIImageView alloc] init];
+        self.backgroundView = bgView;
+        self.bgView = bgView;
+        
+        UIImageView *selectedBgView = [[UIImageView alloc] init];
+        self.selectedBackgroundView = selectedBgView;
+        self.selectedBgView = selectedBgView;
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
     // Initialization code
 }
@@ -70,6 +102,7 @@
     if(cell == nil)
     {
         cell = [[IWSettingCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+        cell.tableView = tableView;
     }
     return cell;
 }
@@ -120,6 +153,53 @@
         // 右边没有东西
         self.accessoryView = nil;
     }
+}
+
+- (void)setIndexPath:(NSIndexPath *)indexPath
+{
+    _indexPath = indexPath;
+    
+    // 1.设置背景的图片
+    int totalRows = [self.tableView numberOfRowsInSection:indexPath.section];
+    NSString *bgName = nil;
+    NSString *selectedBgName = nil;
+    if(totalRows == 1)
+    {
+        // 这组就1行
+        bgName = @"common_card_background";
+        selectedBgName = @"common_card_background_highlighted";
+    }
+    else if (indexPath.row == 0)
+    {
+        // 首行
+        bgName = @"common_card_top_background";
+        selectedBgName = @"common_card_top_background_highlighted";
+    }
+    else if (indexPath.row == totalRows - 1)
+    {
+        // 尾行
+        bgName = @"common_card_bottom_background";
+        selectedBgName = @"common_card_bottom_background_highlighted";
+    }
+    else
+    {
+        // 中行
+        bgName = @"common_card_middle_background";
+        selectedBgName = @"common_card_middle_background_highlighted";
+    }
+    self.bgView.image = [UIImage resizedImageWithName:bgName];
+    self.selectedBgView.image = [UIImage resizedImageWithName:selectedBgName];
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    if(iOS7)
+    {
+        frame.origin.x = 5;
+        frame.size.width -= 10;
+    }
+    
+    [super setFrame:frame];
 }
 
 @end

@@ -21,7 +21,6 @@
 		0829D89819172DBE005E4B1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D89719172DBE005E4B1D /* CoreGraphics.framework */; };
 		0829D89A19172DBE005E4B1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D89919172DBE005E4B1D /* UIKit.framework */; };
 		0829D8A019172DBE005E4B1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0829D89E19172DBE005E4B1D /* InfoPlist.strings */; };
-		0829D8A819172DBE005E4B1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0829D8A719172DBE005E4B1D /* Images.xcassets */; };
 		0829D8AF19172DBE005E4B1D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D8AE19172DBE005E4B1D /* XCTest.framework */; };
 		0829D8B019172DBE005E4B1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D89519172DBE005E4B1D /* Foundation.framework */; };
 		0829D8B119172DBE005E4B1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D89919172DBE005E4B1D /* UIKit.framework */; };
@@ -113,7 +112,10 @@
 		08F5B3171920C05B0078735A /* new_feature_3-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 08F5B3141920C05B0078735A /* new_feature_3-568h@2x.png */; };
 		08F5B3191920C6110078735A /* IWCommon.h in Resources */ = {isa = PBXBuildFile; fileRef = 08F5B3181920C6110078735A /* IWCommon.h */; };
 		08FD20651924696B004EFDB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0829D89519172DBE005E4B1D /* Foundation.framework */; };
+		BC54746E1A7B274B00C07755 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC54746D1A7B274B00C07755 /* Images.xcassets */; };
+		BC5474711A7B2FD100C07755 /* IWGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5474701A7B2FD100C07755 /* IWGeneralViewController.m */; };
 		BC60D3541A7A8B0E003B6780 /* IWSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC60D3531A7A8B0E003B6780 /* IWSettingCell.m */; };
+		BCC97A701A7B209E00116AA1 /* IWSystemSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC97A6F1A7B209E00116AA1 /* IWSystemSettingViewController.m */; };
 		BCD2D46B1A7A4DF900CF2B2E /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D44B1A7A4DF900CF2B2E /* MKAnnotationView+WebCache.m */; };
 		BCD2D46C1A7A4DF900CF2B2E /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D44D1A7A4DF900CF2B2E /* NSData+ImageContentType.m */; };
 		BCD2D46D1A7A4DF900CF2B2E /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2D44F1A7A4DF900CF2B2E /* SDImageCache.m */; };
@@ -186,7 +188,6 @@
 		0829D89919172DBE005E4B1D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0829D89D19172DBE005E4B1D /* ItcastWeibo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ItcastWeibo-Info.plist"; sourceTree = "<group>"; };
 		0829D89F19172DBE005E4B1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0829D8A719172DBE005E4B1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0829D8AD19172DBE005E4B1D /* ItcastWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItcastWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0829D8AE19172DBE005E4B1D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0829D8B619172DBE005E4B1D /* ItcastWeiboTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ItcastWeiboTests-Info.plist"; sourceTree = "<group>"; };
@@ -360,8 +361,13 @@
 		08F5B3141920C05B0078735A /* new_feature_3-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_feature_3-568h@2x.png"; sourceTree = "<group>"; };
 		08F5B3181920C6110078735A /* IWCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWCommon.h; sourceTree = "<group>"; };
 		08FD20641924696B004EFDB9 /* 啊啊啊啊 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "啊啊啊啊"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC54746D1A7B274B00C07755 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BC54746F1A7B2FD100C07755 /* IWGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWGeneralViewController.h; sourceTree = "<group>"; };
+		BC5474701A7B2FD100C07755 /* IWGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWGeneralViewController.m; sourceTree = "<group>"; };
 		BC60D3521A7A8B0E003B6780 /* IWSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSettingCell.h; sourceTree = "<group>"; };
 		BC60D3531A7A8B0E003B6780 /* IWSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSettingCell.m; sourceTree = "<group>"; };
+		BCC97A6E1A7B209E00116AA1 /* IWSystemSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSystemSettingViewController.h; sourceTree = "<group>"; };
+		BCC97A6F1A7B209E00116AA1 /* IWSystemSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSystemSettingViewController.m; sourceTree = "<group>"; };
 		BCD2D44A1A7A4DF900CF2B2E /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		BCD2D44B1A7A4DF900CF2B2E /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		BCD2D44C1A7A4DF900CF2B2E /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -405,8 +411,8 @@
 		BCDC71621A7A7264000E01DB /* IWSettingSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSettingSwitchItem.m; sourceTree = "<group>"; };
 		BCDC71661A7A73B5000E01DB /* IWSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSettingGroup.h; sourceTree = "<group>"; };
 		BCDC71671A7A73B5000E01DB /* IWSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSettingGroup.m; sourceTree = "<group>"; };
-		BCDC71691A7A765D000E01DB /* IWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWSettingViewController.h; sourceTree = "<group>"; };
-		BCDC716A1A7A765D000E01DB /* IWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWSettingViewController.m; sourceTree = "<group>"; };
+		BCDC71691A7A765D000E01DB /* IWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWSettingViewController.h; path = ../Model/IWSettingViewController.h; sourceTree = "<group>"; };
+		BCDC716A1A7A765D000E01DB /* IWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWSettingViewController.m; path = ../Model/IWSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,10 +515,10 @@
 		0829D89C19172DBE005E4B1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC54746D1A7B274B00C07755 /* Images.xcassets */,
 				08F5B3121920C05B0078735A /* new_feature_1-568h@2x.png */,
 				08F5B3131920C05B0078735A /* new_feature_2-568h@2x.png */,
 				08F5B3141920C05B0078735A /* new_feature_3-568h@2x.png */,
-				0829D8A719172DBE005E4B1D /* Images.xcassets */,
 				0829D89D19172DBE005E4B1D /* ItcastWeibo-Info.plist */,
 				0829D89E19172DBE005E4B1D /* InfoPlist.strings */,
 			);
@@ -701,6 +707,12 @@
 		0829D8EA19173977005E4B1D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC54746F1A7B2FD100C07755 /* IWGeneralViewController.h */,
+				BC5474701A7B2FD100C07755 /* IWGeneralViewController.m */,
+				BCC97A6E1A7B209E00116AA1 /* IWSystemSettingViewController.h */,
+				BCC97A6F1A7B209E00116AA1 /* IWSystemSettingViewController.m */,
+				BCDC71691A7A765D000E01DB /* IWSettingViewController.h */,
+				BCDC716A1A7A765D000E01DB /* IWSettingViewController.m */,
 				0829D8EB19173977005E4B1D /* IWMeViewController.h */,
 				0829D8EC19173977005E4B1D /* IWMeViewController.m */,
 			);
@@ -1109,8 +1121,6 @@
 		BCDC71581A7A7237000E01DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BCDC71691A7A765D000E01DB /* IWSettingViewController.h */,
-				BCDC716A1A7A765D000E01DB /* IWSettingViewController.m */,
 				BCDC71661A7A73B5000E01DB /* IWSettingGroup.h */,
 				BCDC71671A7A73B5000E01DB /* IWSettingGroup.m */,
 				BCDC715D1A7A7264000E01DB /* IWSettingArrowItem.h */,
@@ -1228,9 +1238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC54746E1A7B274B00C07755 /* Images.xcassets in Resources */,
 				08F5B3191920C6110078735A /* IWCommon.h in Resources */,
 				0829D8A019172DBE005E4B1D /* InfoPlist.strings in Resources */,
-				0829D8A819172DBE005E4B1D /* Images.xcassets in Resources */,
 				080883E219205BD900A6840F /* MJPhotoBrowser.bundle in Resources */,
 				08F5B30D1920B1350078735A /* MJRefresh.bundle in Resources */,
 				08F5B3161920C05B0078735A /* new_feature_2-568h@2x.png in Resources */,
@@ -1285,6 +1295,7 @@
 				08AFD1B6191F2B7600F4A911 /* IWPhoto.m in Sources */,
 				BC60D3541A7A8B0E003B6780 /* IWSettingCell.m in Sources */,
 				0829D8FD19173977005E4B1D /* IWMeViewController.m in Sources */,
+				BCC97A701A7B209E00116AA1 /* IWSystemSettingViewController.m in Sources */,
 				08CE62781917724F002DA6BF /* IWTabBarButton.m in Sources */,
 				08DA2D02192EF568003B1F9D /* FMDatabaseAdditions.m in Sources */,
 				BCD2D4771A7A4DF900CF2B2E /* UIImage+WebP.m in Sources */,
@@ -1319,6 +1330,7 @@
 				0863B972191B1DAC00B6BA5F /* AFHTTPSessionManager.m in Sources */,
 				0829D8FA19173977005E4B1D /* IWDiscoverViewController.m in Sources */,
 				BCD2D4751A7A4DF900CF2B2E /* UIImage+GIF.m in Sources */,
+				BC5474711A7B2FD100C07755 /* IWGeneralViewController.m in Sources */,
 				08CE627B191788E1002DA6BF /* IWBadgeButton.m in Sources */,
 				BCD2D4711A7A4DF900CF2B2E /* SDWebImageDownloaderOperation.m in Sources */,
 				0863B975191B1DAC00B6BA5F /* AFURLConnectionOperation.m in Sources */,
@@ -1492,6 +1504,7 @@
 				GCC_PREFIX_HEADER = "ItcastWeibo/Classes/Other(其他)/ItcastWeibo-Prefix.pch";
 				INFOPLIST_FILE = "ItcastWeibo/ItcastWeibo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1507,6 +1520,7 @@
 				GCC_PREFIX_HEADER = "ItcastWeibo/Classes/Other(其他)/ItcastWeibo-Prefix.pch";
 				INFOPLIST_FILE = "ItcastWeibo/ItcastWeibo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

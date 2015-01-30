@@ -49,6 +49,19 @@
 {
     [super viewDidLoad];
 
+    self.tableView.backgroundView = nil;
+    self.tableView.backgroundColor = IWColor(226, 226, 226);
+    
+    self.tableView.sectionHeaderHeight = 5;
+    self.tableView.sectionFooterHeight = 0;
+    
+    // 去掉cell的分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    if(iOS7)
+    {
+        self.tableView.contentInset = UIEdgeInsetsMake(-30, 0, 0, 0);
+    }
 }
 
 #pragma mark - Table view data source
@@ -87,6 +100,7 @@
 //    cell.indexPath = indexPath;
     IWSettingGroup *group = self.groups[indexPath.section];
     cell.item = group.items[indexPath.row];
+    cell.indexPath = indexPath;
     return cell;
 }
 
@@ -108,7 +122,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     // 1.取出模型
-    IWSettingGroup *group = self.groups[indexPath.section];
+    IWSettingGroup *group = self.groups[indexPath.section]; // 某一块
     IWSettingItem *item = group.items[indexPath.row];
     
     // 2.操作

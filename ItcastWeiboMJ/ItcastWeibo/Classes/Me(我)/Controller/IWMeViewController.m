@@ -10,6 +10,7 @@
 #import "IWSettingArrowItem.h"
 #import "IWSettingGroup.h"
 #import "IWSettingSwitchItem.h"
+#import "IWSystemSettingViewController.h"
 
 @interface IWMeViewController ()
 @end
@@ -19,12 +20,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
     
     [self setupGroup0];
     [self setupGroup1];
     [self setupGroup2];
     [self setupGroup3];
+}
+
+- (void)setting
+{
+    IWSystemSettingViewController *sys = [[IWSystemSettingViewController alloc] init];
+    [self.navigationController pushViewController:sys animated:YES];
 }
 
 - (void)setupGroup0
