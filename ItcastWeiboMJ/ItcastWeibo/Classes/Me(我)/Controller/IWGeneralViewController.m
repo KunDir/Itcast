@@ -10,6 +10,8 @@
 #import "IWSettingArrowItem.h"
 #import "IWSettingSwitchItem.h"
 #import "IWSettingGroup.h"
+#import "MBProgressHUD+MJ.h"
+#import "SDWebImageManager.h"
 
 
 @interface IWGeneralViewController ()
@@ -73,6 +75,35 @@
     IWSettingGroup *group = [self addGroup];
     
     IWSettingArrowItem *clearCache = [IWSettingArrowItem itemWithTitle:@"清除图片缓存"];
+    clearCache.operation = ^{
+        // 弹框
+        [MBProgressHUD showMessage:@"正在清理缓存"];
+        // 执行清除缓存
+        NSFileManager *mgr = [NSFileManager defaultManager];
+        NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+        [mgr removeItemAtPath:cachePath error:nil];
+        
+        // 关闭弹框
+        [MBProgressHUD hideHUD];
+        
+        // 计算缓存文件夹的大小
+//        long long totalSize = 0;
+//        NSArray *subpaths = [mgr subpathsAtPath:cachePath];
+//        for(NSString *subpath in subpaths)
+//        {
+//            NSString *fullpath = [cachePath stringByAppendingPathComponent:subpath];
+//            BOOL dir = NO;
+//            [mgr fileExistsAtPath:fullpath isDirectory:&dir];
+//            if(dir == NO) // 文件
+//            {
+//                totalSize += [[mgr attributesOfItemAtPath:fullpath error:nil] [NSFileSize] longLongValue];
+//            }
+//        }
+//        NSLog(@"%lld", totalSize);
+        
+//        [[SDWebImageManager sharedManager].imageCache cleanDisk];
+    };
+    
     IWSettingArrowItem *clearHistory = [IWSettingArrowItem itemWithTitle:@"清空搜索历史"];
     group.items = @[clearCache, clearHistory];
 }
